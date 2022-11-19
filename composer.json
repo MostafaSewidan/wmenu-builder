@@ -20,16 +20,16 @@
     },
     "autoload": {
         "psr-4": {
-          "Tocaan\Menu\\": "src/"
+          "Tocaan\\Menu\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Tocaan\Menu\\MenuServiceProvider"
+                "Tocaan\\Menu\\MenuServiceProvider"
             ],
             "aliases": {
-                "Menu": "Tocaan\Menu\\Facades\\Menu"
+                "Menu": "Tocaan\\Menu\\Facades\\Menu"
             }
         }
     },

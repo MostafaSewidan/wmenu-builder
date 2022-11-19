@@ -1,6 +1,6 @@
 <?php
 
-namespace TocaanMenu\Models;
+namespace Tocaan\Menu\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,6 +21,6 @@ class Menus extends Model
 
     public function items()
     {
-        return $this->hasMany('TocaanMenu\Models\MenuItems', 'menu')->with('child')->where('parent', 0)->orderBy('sort', 'ASC');
+        return $this->hasMany('Tocaan\Menu\Models\MenuItems', 'menu')->with('child')->where('parent', 0)->orderBy('sort', 'ASC');
     }
 }

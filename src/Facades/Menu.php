@@ -1,5 +1,5 @@
 <?php 
-namespace TocaanMenu\Facades;
+namespace Tocaan\Menu\Facades;
 use Illuminate\Support\Facades\Facade;
 
 class Menu extends Facade {

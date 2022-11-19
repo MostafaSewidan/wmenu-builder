@@ -1,6 +1,6 @@
 <?php
 
-namespace TocaanMenu;
+namespace Tocaan\Menu;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
@@ -50,7 +50,7 @@ class MenuServiceProvider extends ServiceProvider
             return new WMenu();
         });
 
-        $this->app->make('TocaanMenu\Controllers\MenuController');
+        $this->app->make('Tocaan\Menu\Controllers\MenuController');
         $this->mergeConfigFrom(
             __DIR__ . '/../config/menu.php',
             'menu'

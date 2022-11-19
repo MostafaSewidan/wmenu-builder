@@ -1,13 +1,13 @@
 <?php
 
-namespace TocaanMenu\Controllers;
+namespace Tocaan\Menu\Controllers;
 
-use TocaanMenu\Facades\Menu;
+use Tocaan\Menu\Facades\Menu;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use TocaanMenu\Models\Menus;
-use TocaanMenu\Models\MenuItems;
+use Tocaan\Menu\Models\Menus;
+use Tocaan\Menu\Models\MenuItems;
 
 class MenuController extends Controller
 {

@@ -20,19 +20,19 @@ composer require tocaan/laravel-menu
 2. Add the following class, to "providers" array in the file config/app.php (optional on laravel 5.5)
 
 ```php
-TocaanMenu\MenuServiceProvider::class,
+Tocaan\Menu\MenuServiceProvider::class,
 ```
 
 3. add facade in the file config/app.php (optional on laravel 5.5)
 
 ```php
-'Menu' => TocaanMenu\Facades\Menu::class,
+'Menu' => Tocaan\Menu\Facades\Menu::class,
 ```
 
 4. Run publish
 
 ```php
-php artisan vendor:publish --provider="TocaanMenu\MenuServiceProvider"
+php artisan vendor:publish --provider="Tocaan\Menu\MenuServiceProvider"
 ```
 
 5. Configure (optional) in **_config/menu.php_** :
@@ -73,8 +73,8 @@ On your view blade file
 Call the model class
 
 ```php
-use TocaanMenu\Models\Menus;
-use TocaanMenu\Models\MenuItems;
+use Tocaan\Menu\Models\Menus;
+use Tocaan\Menu\Models\MenuItems;
 
 ```
 
@@ -147,7 +147,7 @@ Now inside your blade template file place the menu using this simple example
 ### Get Menu Items By Menu ID
 
 ```php
-use TocaanMenu\Facades\Menu;
+use Tocaan\Menu\Facades\Menu;
 ...
 /*
 Parameter: Menu ID
@@ -161,7 +161,7 @@ $menuList = Menu::get(1);
 In this example, you must have a menu named _Admin_
 
 ```php
-use TocaanMenu\Facades\Menu;
+use Tocaan\Menu\Facades\Menu;
 ...
 /*
 Parameter: Menu ID

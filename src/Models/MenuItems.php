@@ -1,6 +1,6 @@
 <?php
 
-namespace TocaanMenu\Models;
+namespace Tocaan\Menu\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -33,11 +33,11 @@ class MenuItems extends Model
 
     public function parent_menu()
     {
-        return $this->belongsTo('TocaanMenu\Models\Menus', 'menu');
+        return $this->belongsTo('Tocaan\Menu\Models\Menus', 'menu');
     }
 
     public function child()
     {
-        return $this->hasMany('TocaanMenu\Models\MenuItems', 'parent')->orderBy('sort', 'ASC');
+        return $this->hasMany('Tocaan\Menu\Models\MenuItems', 'parent')->orderBy('sort', 'ASC');
     }
 }

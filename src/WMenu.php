@@ -1,10 +1,10 @@
 <?php
 
-namespace TocaanMenu;
+namespace Tocaan\Menu;
 
 use App\Http\Requests;
-use TocaanMenu\Models\Menus;
-use TocaanMenu\Models\MenuItems;
+use Tocaan\Menu\Models\Menus;
+use Tocaan\Menu\Models\MenuItems;
 use Illuminate\Support\Facades\DB;
 
 class WMenu
