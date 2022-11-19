@@ -1,10 +1,10 @@
 <?php
 
-namespace Harimayco\Menu;
+namespace TocaanMenu;
 
 use App\Http\Requests;
-use Harimayco\Menu\Models\Menus;
-use Harimayco\Menu\Models\MenuItems;
+use TocaanMenu\Models\Menus;
+use TocaanMenu\Models\MenuItems;
 use Illuminate\Support\Facades\DB;
 
 class WMenu

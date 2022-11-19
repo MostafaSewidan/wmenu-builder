@@ -1,13 +1,13 @@
 <?php
 
-namespace Harimayco\Menu\Controllers;
+namespace TocaanMenu\Controllers;
 
-use Harimayco\Menu\Facades\Menu;
+use TocaanMenu\Facades\Menu;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Harimayco\Menu\Models\Menus;
-use Harimayco\Menu\Models\MenuItems;
+use TocaanMenu\Models\Menus;
+use TocaanMenu\Models\MenuItems;
 
 class MenuController extends Controller
 {
