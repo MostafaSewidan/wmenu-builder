@@ -11,8 +11,18 @@ class MenuItems extends Model
 
     protected $table = null;
 
-    protected $fillable = ['label', 'link', 'parent', 'sort', 'class', 'menu', 'depth', 'role_id','type'];
+    protected $fillable = ['label', 'link', 'parent', 'sort', 'class', 'menu', 'depth', 'role_id','type','json_data'];
     public $translatable 	= ['label','link'];
+
+    protected $casts = [
+        'json_data' => 'array',
+    ];
+
+    protected function asJson($value)
+    {
+        return json_encode($value, JSON_UNESCAPED_UNICODE);
+    }
+
 
     public function __construct(array $attributes = [])
     {

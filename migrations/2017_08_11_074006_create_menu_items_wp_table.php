@@ -25,6 +25,7 @@ class CreateMenuItemsWpTable extends Migration
             $table->bigInteger('itemable_id')->nullable();
             $table->unsignedBigInteger('menu');
             $table->integer('depth')->default(0);
+            $table->longText('json_data')->nullable();
             $table->timestamps();
 
             $table->foreign('menu')->references('id')->on(config('menu.table_prefix') . config('menu.table_name_menus'))
