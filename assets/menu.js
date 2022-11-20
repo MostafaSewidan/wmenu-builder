@@ -60,6 +60,41 @@ function addcustommenu() {
   });
 }
 
+$('.createitemForm').on('submit', function (e) {
+  e.preventDefault();
+
+  var url = $(this).attr('action');
+  var method = $(this).attr('method');
+  var btn = $(this).find('.submit');
+  var spinner = btn.find('.spinner');
+  $.ajax({
+
+      url: url,
+      type: method,
+      dataType: 'JSON',
+      data: new FormData(this),
+      contentType: false,
+      cache: false,
+      processData: false,
+
+      beforeSend: function () {
+        btn.prop('disabled', true);
+        spinner.show();
+        resetErrors();
+      },
+      success: function (data) {
+          
+        window.location.reload();
+      },
+      error: function (data) {
+        btn.prop('disabled', false);
+          spinner.hide();
+          displayErrors(data);
+          requestUpdating('error', data);
+      },
+  });
+});
+
 function updateitem(id = 0) {
   if (id) {
     var label = $('#idlabelmenu_' + id).val();
@@ -115,7 +150,9 @@ function updateitem(id = 0) {
         $('#spincustomu2').show();
       }
     },
-    success: function(response) {},
+    success: function(response) {
+      alertMessage('success','menu updated')
+    },
     complete: function() {
       if (id) {
         $('#spincustomu2').hide();

@@ -3,18 +3,25 @@
 namespace Tocaan\Menu\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 
 class MenuItems extends Model
 {
+    use HasTranslations;
 
     protected $table = null;
 
-    protected $fillable = ['label', 'link', 'parent', 'sort', 'class', 'menu', 'depth', 'role_id'];
+    protected $fillable = ['label', 'link', 'parent', 'sort', 'class', 'menu', 'depth', 'role_id','type'];
+    public $translatable 	= ['label','link'];
 
     public function __construct(array $attributes = [])
     {
-        //parent::construct( $attributes );
         $this->table = config('menu.table_prefix') . config('menu.table_name_items');
+    }
+
+    public function itemable()
+    {
+        return $this->morphTo();
     }
 
     public function getsons($id)
