@@ -26,6 +26,7 @@ class MenuController extends Controller
         $menuitem = MenuItems::find(request()->input("id"));
 
         $menuitem->delete();
+        return response()->json([]);
     }
 
     public function deletemenug()
