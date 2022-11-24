@@ -38,6 +38,7 @@ class MenuItems extends Model
     {
         return $this->where("parent", $id)->get();
     }
+    
     public function getall($id)
     {
         return $this->where("menu", $id)->orderBy("sort", "asc")->get();

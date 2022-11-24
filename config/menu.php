@@ -25,4 +25,5 @@ return [
     'roles_pk' => 'id', // primary key of the roles table
 
     'roles_title_field' => 'name', // display name (field) of the roles table
+    'controller_name' => '\Tocaan\Menu\Controllers\MenuController', 
 ];
