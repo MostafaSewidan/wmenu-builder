@@ -4,10 +4,12 @@ namespace Tocaan\Menu\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class MenuItems extends Model
+class MenuItems extends Model implements HasMedia
 {
-    use HasTranslations;
+    use HasTranslations,InteractsWithMedia;
 
     protected $table = null;
 
